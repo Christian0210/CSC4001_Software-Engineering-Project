@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "nav": "../../components/nav/nav"
+  },
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "四级单词"
+}

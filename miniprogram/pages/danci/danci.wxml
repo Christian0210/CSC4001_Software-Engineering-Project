@@ -1,0 +1,16 @@
+<!--pages/danci/danci.wxml-->
+<nav
+  class="nav-instance"
+  showIcons="{{['back']}}"
+></nav>
+<view class="circle circle-one"></view>
+<view class="circle circle-two"></view>
+<view class = "container">
+    <image
+      src="../../images/habiterLogo.png"
+      style="width: 200rpx;height: 200rpx;margin-top: 220rpx;opacity: {{wordData.bannerurl && wordData.show && nowTime <= wordData.urlExpire && !loadingWord ? '0.8' : '1'}}"
+      bindtap="clickPig"
+    ></image>
+    <button class = "btn cet4" catchtap='onCet4'>四级单词</button>
+    <button class = "btn cet6 "catchtap='onCet6'>六级单词</button>
+</view>

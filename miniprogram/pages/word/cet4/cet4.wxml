@@ -1,0 +1,17 @@
+<!--pages/word/cet4/cet4.wxml-->
+<nav
+  class="nav-instance"
+  showIcons="{{['back']}}"
+></nav>
+<view class = "cet">
+    <view class = "content"> 
+        <text class='word'>{{content}}</text>
+        <view class="pron">
+           <text class = "word-pron" bindtap='read'>/{{pron}}/</text>
+        </view>
+    </view>
+    <text wx:if = "{{show}}" class = "word-definition">{{definition}}</text>
+    <button class = "button miss" catchtap='show'>不认识</button>
+    <button class = "button next" catchtap='next'>下一个</button>
+</view>
+

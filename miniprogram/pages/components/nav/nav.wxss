@@ -1,0 +1,64 @@
+.list-page {
+  background-color: #f8fafb;
+}
+.content {
+  position: relative;
+  /* width: 100%; */
+  height: 88rpx;
+  display:flex;
+  align-items:center;
+  padding:0 0 0 18rpx;
+}
+/* 新增图标 */
+.nav-icon-view {
+  border-radius:50%;
+  width:70rpx;
+  height:70rpx;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-right: 22rpx;
+}
+.nav-icon-view-back {
+  width:70rpx;
+  height:70rpx;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-right: 23rpx;
+}
+.has-font {
+  width:74px;
+  border-radius:50rpx;
+  font-size:33rpx;
+  padding:0 10rpx;
+}
+.nav-icon {
+  width: 36rpx;
+  height: 36rpx;
+  background-size: 66%;
+  background-repeat: no-repeat;
+}
+.loading-icon {
+  animation: headRotate 2s linear infinite;
+}
+@keyframes headRotate{
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
+}
+.issue {
+  background-image:url("https://6461-dandan-zdm86-1259814516.tcb.qcloud.la/telemarketer.png?sign=52b81c866fee1a02585b92c6ca5e1441&t=1573302479");
+}
+.search {
+  background-image: url("https://6461-dandan-zdm86-1259814516.tcb.qcloud.la/search.png?sign=bf636b48f7322a460a4107910d4e9a3b&t=1573268446");
+}
+.more-chart {
+  background-image: url("https://6461-dandan-zdm86-1259814516.tcb.qcloud.la/stats.png?sign=0099917fdb61393a6fd2d8fb5f5baf56&t=1573302662");
+}
+.setting {
+  background-image: url("https://6461-dandan-zdm86-1259814516.tcb.qcloud.la/icon/gear.png?sign=ac534f78f7f4a7dbe014e090c92b4ada&t=1587830797");
+}
+.target {
+  background-image: url("https://6461-dandan-zdm86-1259814516.tcb.qcloud.la/icon/target.png?sign=c1a3041e9cb303858db6b7c7d50b3949&t=1587830639");
+}

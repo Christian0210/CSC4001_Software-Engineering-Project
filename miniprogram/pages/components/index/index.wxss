@@ -1,0 +1,177 @@
+.banner {
+  width: 100%;
+  height: 410rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-bg {
+  width: 100%;
+  height: 410rpx;
+  position: fixed;
+  z-index: -1;
+}
+.banner-special {
+  width: 100%;
+  height: 410rpx;
+  /* background: linear-gradient(40deg, #ff6ec4, #5e72e4); */
+  background: linear-gradient(40deg, #f7d14a, rgb(17, 196, 169));
+  position: fixed;
+  z-index: -1;
+}
+.banner-img-bg1 {
+  background-image: url("https://wx4.sinaimg.cn/mw690/82f26360gy1gaa4n3pz01g20ia09px6p.gif");
+}
+.banner-img-bg2 {
+  background-image: url("https://wx3.sinaimg.cn/mw690/82f26360gy1gabawajibxg20ia09p7wi.gif");
+}
+.banner-img-bg3 {
+  background-image: url("https://wx4.sinaimg.cn/mw690/82f26360gy1gabaqvv0yog20ia09pqmw.gif");
+}
+.banner-img-bg4 {
+  background-image: url("https://wx1.sinaimg.cn/mw690/82f26360gy1gabb5vsfchg20ia09pwyo.gif");
+}
+.banner-show {
+  display: flex;
+  align-items: center;
+}
+.tab {
+  display: flex;
+  justify-content: space-around;
+  padding: 15rpx 0 0;
+  color: #6c757d;
+  border-radius: 14rpx 14rpx 0 0;
+  margin-top: -40rpx;
+  background: #fff;
+  margin: -40rpx 20rpx 0;
+}
+.tab-item {
+  width: 50%;
+  text-align: center;
+  padding: 0 0 15rpx;
+  border-bottom: 4rpx solid #f5f5f5;
+}
+.active-tab {
+  color: #ffdd57;
+  border-bottom: 4rpx solid #ffdd57;
+}
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16rpx 20rpx;
+  border-bottom: solid 1rpx rgba(0,0,0,.1);
+  margin: 0 20rpx;
+  background-color: #fff;
+}
+.section input {
+  /* padding: 20rpx 0; */
+  height: 80rpx;
+  text-align: right;
+  width: 100%;
+}
+.input-field {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+}
+.default-text {
+  position: absolute;
+  right: 0;
+}
+.cate {
+  margin: 10rpx 16rpx;
+  font-size: 26rpx;
+  padding: 8rpx 20rpx;
+  border-radius: 6rpx;
+  background-color: #f7f8f9;
+  color: rgba(0,0,0,.6);
+  text-align: center;
+}
+.active {
+  color: #fff;
+}
+.date-item {
+  margin: 10rpx;
+  padding: 5rpx 10rpx;
+  background-color: #ccc;
+  text-align: center;
+  border-radius: 10rpx;
+}
+.btn-area {
+  text-align: center;
+}
+.btn-area button {
+  border: 1px solid transparent;
+  border-radius: 9rpx;
+  font-size: 28rpx;
+  padding: 20rpx 40rpx;
+  display: inline-block;
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 14rpx;
+  text-decoration: none;
+  line-height: normal;
+  width: 90%;
+  margin: 40rpx 0 0rpx;
+}
+.input-sum, .default-text {
+  font-size: 46rpx;
+}
+.select-field {
+  display: flex;
+}
+.select-date {
+  width: 100%;
+  text-align: right;
+  margin-right: 17rpx;
+  font-size: 24rpx;
+}
+.edit-tip {
+  background-color: #ffdd57;
+  width: 60%;
+  border-radius: 6rpx;
+  color: rgba(0,0,0,.6);
+  font-size: 28rpx;
+  text-align: center;
+  margin: 10rpx auto 10rpx;
+  padding: 3rpx 0;
+}
+.pig-talk {
+  display: flex;
+  align-items: center;
+  padding: 14rpx 0;
+  justify-content: center;
+  margin-left: 27rpx;
+}
+.word-tang-left {
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid rgba(255, 142, 142, 0.8);
+  border-left: 10px solid transparent;
+}
+.word-detail {
+  max-width: 500rpx;
+  font-size: 25rpx;
+  background-color: rgba(255, 142, 142, 0.8);
+  padding: 9px;
+  border-radius: 24rpx;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-align: left;
+}
+.active-paytype {
+  color: #ff6ec4;
+}
+
+.titleText {
+  font-weight: bold;
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(17, 196, 169);
+  text-shadow: 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 0px 0 white, 2px 0px 0 white, -2px 0px 0 white, -2px 0px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 0px 0 white, 2px 0px 0 white, -2px 0px 0 white, -2px 0px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 0px 0 white, 2px 0px 0 white, -2px 0px 0 white, -2px 0px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 0px 0 white, 2px 0px 0 white, -2px 0px 0 white, -2px 0px 0 white, 0px 2px 0 white, 0px -2px 0 white, 0px -2px 0 white, 0px 2px 0 white, 0px 2px 0 white, 0px -2px 0 white, 0px -2px 0 white, 0px 2px 0 white, 0px 2px 0 white, 0px -2px 0 white, 0px -2px 0 white, 0px 2px 0 white, 0px 2px 0 white, 0px -2px 0 white, 0px -2px 0 white, 0px 2px 0 white, 0px 0px 0 white, 0px 0px 0 white, 0px 0px 0 white, 0px 0px 0 white, 0 0 0 white;
+
+}

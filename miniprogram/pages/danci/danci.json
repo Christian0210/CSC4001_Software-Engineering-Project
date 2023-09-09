@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "nav": "../components/nav/nav",
+    "dialog": "../components/dialog/dialog"
+  },
+  "navigationBarBackgroundColor": "#09d0b200",
+  "backgroundTextStyle": "light",
+  "navigationBarTitleText": "单词记诵"
+}

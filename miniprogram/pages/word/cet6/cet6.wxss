@@ -1,0 +1,42 @@
+/* pages/word/cet6/cet6.wxss */
+page {
+  background-color: #e1dbff;
+}
+.cet {
+  display: flex;
+  flex-direction: column;
+  margin-top: 200rpx;
+  align-items: center;
+}
+.word {
+  font-family: Chalkboard;
+  font-size: 80rpx;
+  align-items: center;
+  margin-top: 100rpx;
+}
+.word-definition {
+  margin-top: 50rpx;
+}
+.pron {
+  margin-top: 40rpx;
+  align-items: center;
+}
+.pron-icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+.button {
+  background-color: #6147ff;
+  height: 100rpx;
+  border-radius: 26rpx;
+  width: 40%;
+  margin-top: 70rpx;
+  margin-bottom: 10rpx;
+  color: #fff;
+  padding: 0 30rpx;
+  font-weight: bold;
+  box-shadow: 0px 10px 13px 4px #b0a5ff;
+}
+.button.next {
+  margin-top: 50rpx;
+}

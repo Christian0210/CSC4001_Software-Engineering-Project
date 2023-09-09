@@ -1,0 +1,5 @@
+weather {
+  display: inline-block;
+  background-color: #000000;
+  /* size: sm; */
+}

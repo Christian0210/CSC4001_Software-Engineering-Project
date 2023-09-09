@@ -1,0 +1,173 @@
+<image
+    class="banner-bg"
+    wx:if="{{wordData.bannerurl && wordData.show && nowTime <= wordData.urlExpire && !loadingWord}}"
+    src="{{wordData.bannerurl}}"
+  ></image>
+<view wx:else class="banner-bg banner-special"></view>
+<view class="banner">
+  <view class="banner-show" wx:if="{{clickPigNum < 5}}">
+    <!-- src="https://images.vrm.cn/2019/08/29/pig.png" -->
+    <text class="titleText">H</text>
+    <image
+      src="../../../images/habiterLogo.png"
+      style="width: 150rpx;height: 150rpx;opacity: {{wordData.bannerurl && wordData.show && nowTime <= wordData.urlExpire && !loadingWord ? '0.8' : '1'}}"
+      bindtap="clickPig"
+    ></image>
+    <text class="titleText">biter</text>
+    <view
+      class='pig-talk'
+      bindtap="closeTalk"
+      data-word="{{wordData}}"
+      wx:if="{{wordData.word && wordData.show && nowTime <= wordData.expire && !loadingWord}}"
+    >
+      <view class='word-tang-left'></view>
+      <view class='word-detail'>{{wordData.word}}</view>
+    </view>
+  </view>
+  <!-- <view wx:else>|д･)怂了</view> -->
+  <view wx:else>
+    <weather></weather>
+  </view>
+</view>
+<view class="tab">
+  <view
+    bindtap="changeTab"
+    data-key="tab"
+    data-value="{{0}}"
+    class="tab-item {{active_tab === 0 ? 'active-tab' : ''}}"
+  >支出</view>
+  <view
+    bindtap="changeTab"
+    data-key="tab"
+    data-value="{{1}}"
+    class="tab-item {{active_tab === 1 ? 'active-tab' : ''}}"
+  >收入</view>
+</view>
+<form>
+  <view
+    wx:if="{{isEdit}}"
+    class="edit-tip"
+    bindtap="resetStatus"
+  >编辑账单，点此处取消</view>
+  <view class="section">
+    <view class="label">金额</view>
+    <view class="input-field">
+      <input
+        class="input-sum"
+        name="sum"
+        type="digit"
+        value="{{sum}}"
+        bindinput="bindInput"
+        maxlength="{{10}}"
+        data-name="sum"
+        auto-focus
+        style="color: {{ active_tab === 1 ? '#4fd69c;' : '#f75676;'}}"
+      />
+      <text
+        class="default-text"
+        style="color: {{ active_tab === 1 ? '#4fd69c;' : '#f75676;'}}"
+        wx:if="{{sum === ''}}"
+      >0.00</text>
+    </view>
+  </view>
+  <view class="section" bindtap="goToCategory" style="height: 84rpx;">
+    <view class="label">分类</view>
+    <view class="input-field" style="flex-direction: row;">
+      <view
+        class="cate"
+        style="background-color: {{active_tab === 1 ? '#4fd69c;' : '#f75676;'}}color: #fff;"
+        wx:if="{{selectedCategory}}"
+      >
+      {{selectedCategory.categoryName}}
+      </view>
+
+      <view class="cate" catchTap="goToCategory" style="margin-right: 0;">...</view>
+    </view>
+  </view>
+  <view class="section">
+    <view class="label">日期</view>
+    <view class="input-field">
+      <view class="select-date">{{active_date_time}}{{active_date === '昨天' || active_date === '前天' ?  (" ("+ active_date + ")") : ''}}</view>
+      <view class="select-field">
+        <view
+          class="date-item"
+          bindtap="changeTab"
+          data-key="date"
+          data-value="前天"
+          class="cate {{active_date === '前天' ? 'active' : ''}}"
+          style="background-color: {{active_date === '前天' ? active_tab === 1 ? '#4fd69c;' : '#f75676;' : ''}}"
+        >前天</view>
+        <view
+          class="date-item"
+          bindtap="changeTab"
+          data-key="date"
+          data-value="昨天"
+          class="cate {{active_date === '昨天' ? 'active' : ''}}"
+          style="background-color: {{active_date === '昨天' ? active_tab === 1 ? '#4fd69c;' : '#f75676;' : ''}}"
+        >昨天</view>
+        <view
+          class="date-item"
+          bindtap="changeTab"
+          data-key="date"
+          data-value="今天"
+          class="cate {{active_date === '今天' ? 'active' : ''}}"
+          style="background-color: {{active_date === '今天' ? active_tab === 1 ? '#4fd69c;' : '#f75676;' : ''}}"
+        >今天</view>
+        <picker
+          mode="date"
+          value="{{active_date_time}}"
+          start="1995-09-12"
+          bindchange="bindDateChange"
+        >
+          <view class="cate" style="margin-right: 0;">...</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class="section" style="border-bottom: none;">
+    <view class="label" wx:if="{{showPayType}}" bindtap="onShowPayTypeDialog">备注{{payType ? '/' : ''}}{{payType}}</view>
+    <view class="label" wx:else>备注</view>
+    <view class="input-field" style="width: {{showPayType ? '60' : '80'}}%;">
+      <input
+        name="note"
+        value="{{note}}"
+        bindinput="bindInput"
+        maxlength="100"
+        data-name="note"
+        placeholder="简要备注说明"
+      />
+    </view>
+  </view>
+  <view class="btn-area">
+    <button bindtap="submitForm" class="warn" wx:if="{{!loadingCreate}}">{{isEdit ? '编辑' : '确认'}}</button>
+    <button class="warn" style="opacity: .5;" wx:else>{{isEdit ? '编辑' : '创建'}}中...</button>
+  </view>
+</form>
+<!-- 支付方式弹窗 -->
+<dialog visible="{{showPayTypeDialog}}" bind:closeDialog="closeDialog">
+  <view slot="content">
+    <view class="pop-indicator"></view>
+    <view class="d-header">
+      选择本笔账单的支付方式
+    </view>
+    <view
+      wx:for="{{payTypeList}}"
+      class="list-item-btn {{payType === item ? 'active-paytype' : ''}}"
+      bindtap="selectType"
+      wx:key="item"
+      data-paytype="{{item}}"
+    >{{item || '无'}}</view>
+    <view class='list-item-btn' bindtap="closeDialog" style="border-bottom: none;">取消</view>
+  </view>
+</dialog>
+<dialog visible="{{showAuthDialog}}" bind:closeDialog="closeDialog">
+  <view slot="content">
+    <view class="pop-indicator"></view>
+    <view class="d-header">
+      订阅信息开启失败
+      <view class="dialog-tip">由于你的设备拒绝了订阅权限，我们无法主动替你开启。请打开设置进行手动开启～</view>
+    </view>
+    <view class='list-item-btn' style="color: #4fd69c;" bindtap="openSetting">打开设置</view>
+    <view class='list-item-btn' bindtap="closeDialog" style="border-bottom: none;">取消</view>
+  </view>
+</dialog>

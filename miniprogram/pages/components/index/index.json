@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "list": "../list/list",
+    "dialog": "../dialog/dialog",
+    "weather": "plugin://weather/weather"
+  }
+}

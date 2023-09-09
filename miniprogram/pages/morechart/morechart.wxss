@@ -1,0 +1,34 @@
+page {
+  background-color: #F9F9F9;
+  height: 100%;
+}
+.charts {
+  margin: 0 auto;
+  height: 500rpx;
+  background-color: #F9F9F9;
+}
+.desc {
+  text-align: center;
+  font-size: 28rpx;
+  color: #777;
+  margin-bottom: 60rpx;
+}
+.pick-date {
+  text-align: center;
+  border: 1px solid #eee;
+  width: 50%;
+  margin: 10rpx auto 80rpx;
+  border-radius: 15rpx;
+  font-size: 28rpx;
+  
+  padding: 10rpx;
+  color: #555;
+  height: 46rpx;
+  line-height: 46rpx;
+  background-color: #EBEBEB;
+}
+.date-tip {
+  text-align: center;
+  font-size: 25rpx;
+  color: grey;
+}
