@@ -1,0 +1,85 @@
+<wxs module="rangeStyle">
+var handle = function(day, dateRange) {
+  if (dateRange.indexOf(day.date) !== -1) return 'range-pick';
+};
+var formatDate = function(dateRange, today) {
+  if (dateRange.length === 1) return '再选择一个日期';
+  if (dateRange.length === 0 || (dateRange[0] === today && dateRange[1] === today)) {
+    return '今日';
+    
+  }
+  if (dateRange[0] === dateRange[1]) {
+    return dateRange[0];
+  }
+  return dateRange[0] + ' ~ ' + dateRange[1];
+}
+var numParse = function(num) {
+  num = Number(num)
+  return +parseFloat(num.toPrecision(12));
+}
+
+module.exports.handle = handle;
+module.exports.formatDate = formatDate
+module.exports.numParse = numParse
+</wxs>
+
+<view class="calendar">
+  <view class="header">
+    <view class="date">
+      <picker
+        mode="date"
+        fields="month"
+        value="{{pickDate}}"
+        bindchange="bindPickDateChange"
+      >
+        <text class="date-display">{{pickDateDisplay}}</text>
+      </picker>
+      <view class="controller">
+        <view class="control-item" bindtap="control" data-mode="pre">
+          <image src="https://images.vrm.cn/2019/08/29/left-arrow.png" class="icon"></image>
+        </view>
+        <view class="control-item" bindtap="control" data-mode="reset">
+          <image src="https://images.vrm.cn/2019/08/29/rotate.png" class="icon"></image>
+        </view>
+        <view class="control-item" bindtap="control" data-mode="next">
+          <image src="https://images.vrm.cn/2019/08/29/right-arrow.png" class="icon"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="days">
+    <view class="day">一</view>
+    <view class="day">二</view>
+    <view class="day">三</view>
+    <view class="day">四</view>
+    <view class="day">五</view>
+    <view class="day weeken">六</view>
+    <view class="day weeken">日</view>
+    <view
+      class="day {{item.position}} {{item.week === 6 || item.week === 7 ? 'weeken' : ''}} {{selectedDate === item.date ? 'selected-date' : ''}} {{today === item.date && showToday ? 'today' : ''}} {{item.inRange ? 'inrange' : ''}} {{rangeStyle.handle(item, dateRange)}}"
+      wx:for="{{allDays}}"
+      wx:key="{{item}}"
+      bindtap="onPickDay"
+      data-day="{{item}}"
+    >
+      {{item.dateNumber}}
+    </view>
+  </view>
+  <view class="show-daterange">
+    <view class="show-daterange-in" wx:if="{{mode === 'range'}}">
+      <block wx:if="{{dateRange.length !== 1}}">
+        <view style="display: flex;justify-content: flex-end;">
+          <view class="result-time">本月</view>
+          <view class="item-pay">支出 {{rangeStyle.numParse(billResult.monthResult.pay.allSum) || 0}}</view>
+          <view class="item-income">收入 {{rangeStyle.numParse(billResult.monthResult.income.allSum) || 0}}</view>
+        </view>
+        <view style="display: flex;justify-content: flex-end;">
+          <view class="result-time">{{rangeStyle.formatDate(dateRange, today)}}</view>
+          <view class="item-pay">支出 {{rangeStyle.numParse(billResult.rangeResult.pay.allSum) || 0}}</view>
+          <view class="item-income">收入 {{rangeStyle.numParse(billResult.rangeResult.income.allSum) || 0}} </view>
+        </view>
+      </block>
+      <view wx:else style="font-weight: bold;height: 74rpx;line-height: 74rpx;">选择结束日期</view>
+    </view>
+  </view>
+</view>

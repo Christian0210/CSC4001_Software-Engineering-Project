@@ -1,0 +1,89 @@
+.parent-name {
+  font-weight: bold;
+  font-size: 27rpx;
+  color: #fff;
+  padding: 10rpx;
+  display: flex;
+  width: 97%;
+  height: 41rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+.add-icon {
+  font-size: 30rpx;
+  float: right;
+  margin-right: 10rpx;
+  display: inline-block;
+  width: 50rpx;
+  text-align: right;
+
+}
+.category {
+  padding: 0 0 130rpx;
+}
+.child-category {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12rpx 0;
+  background: #fff;
+  border-radius: 0 0 6rpx 6rpx;
+}
+.child-category .child {
+  display: flex;
+  align-items: center;
+}
+.child .name {
+  margin: 10rpx 16rpx;
+  font-size: 26rpx;
+  padding: 8rpx 20rpx;
+  border-radius: 6rpx;
+  background-color: #f7f8f9;
+  color: rgba(0,0,0,.6);
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.child-selected {
+  color: #fff !important;
+}
+.item {
+  background-color: #5e72e4;
+  margin: 24rpx 24rpx 30rpx 24rpx;
+  border-radius: 8rpx;
+  border: 1px solid rgba(255,255,255,.78);
+}
+.fill-cate {
+  border-bottom: solid 1rpx rgba(0,0,0,.1);
+  padding: 24rpx;
+  text-align: center;
+  margin: 30rpx 0;
+}
+.delete {
+  font-size: 26rpx;
+  padding: 6rpx;
+  border-radius: 0 6rpx 6rpx 0;
+  color: rgba(0,0,0,.6);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-left: -15rpx;
+  background-color: #f7f8f9;
+}
+.delete-icon {
+  border-left: 1rpx solid #ccd;
+  padding: 0 8rpx;
+  margin-left: 15rpx;
+  margin-right: -12rpx;
+}
+.edit-mode {
+  position: fixed;
+  bottom: 60rpx;
+  right: 60rpx;
+  display: flex;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.edit-mode-img {
+  width: 90rpx;
+  height: 90rpx;
+}

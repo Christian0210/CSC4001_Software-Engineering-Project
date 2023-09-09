@@ -1,0 +1,68 @@
+<template name="msgItem">
+  <view wx:for="{{contents}}" style="display:inline-block;white-space:pre-line">
+    <text wx:if="item.type=='text'" style="padding:0;margin:0;width:auto;" selectable>{{item.text}}</text>
+    <!-- <image wx:if="item.type=='image'" style="width:42rpx;height:42rpx;vertical-align:middle;margin:0 6rpx;" src="{{item.url}}"></image> -->
+    <!-- <image wx:if="item.type=='image'" style="width:42rpx;height:42rpx;vertical-align:middle;margin:0 6rpx;" src="../../images/profile.jpg"></image> -->
+  </view>
+</template>
+
+<!-- <weather id="weatherBar">
+</weather> -->
+<!-- background: #eee - initially -->
+<scroll-view scroll-y style="height:{{scrollHeight}}rpx;background:#f7d14a" scroll-into-view="{{toView}}">
+  <nav
+  class="nav-instance"
+  showIcons="{{['back']}}"
+></nav>
+  <view class="title">
+    <text class="titleText">Habiter</text>
+  </view>
+  <view wx:for="{{messages}}" wx:for-item="i">
+    <view id="{{i.id}}" class="padding clearfix" wx:if="{{i.me}}">
+      <!-- <image class="right-Avatar padding_half" src="{{i.avatar}}"></image> -->
+      <image class="right-Avatar padding_half" src="../../images/profile.jpg"></image>
+      <view class="right-Triangle"></view>
+      <view class="right-speech-message padding_half" wx:if="{{i.speech}}" data-filePath="{{i.filePath}}" bindtap="playSpeech">
+        <view style="display:inline-block;">
+          <image style="width:52rpx;height:42rpx;vertical-align:middle;margin:0 6rpx;" src="{{playingSpeech==i.filePath?speechIcon:defaultSpeechIcon}}"></image> {{i.seconds}}″
+        </view>
+      </view>
+      <view class="right-message padding_half" wx:if="{{!i.speech}}">
+        <template is="msgItem" data="{{...i}}" />
+      </view>
+      
+    </view>
+    
+    <view id="{{i.id}}" class="padding clearfix" wx:if="{{!i.me}}">
+      <image class="left-Avatar padding_half" src="{{i.avatar}}"></image>
+      <view class="left-Triangle"></view>
+      <view class="left-speech-message padding_half" wx:if="{{i.speech}}" data-filePath="{{i.filePath}}" bindtap="playRobotSpeech">
+        <view style="display:inline-block;">
+          <image style="width:52rpx;height:42rpx;vertical-align:middle;margin:0 6rpx;" src="{{playingSpeech==i.filePath?speechIcon:defaultSpeechIcon}}"></image> {{i.seconds}}″
+        </view>
+      </view>
+      <view class="left-message padding_half" wx:if="{{!i.speech}}">
+        <template is="msgItem" data="{{...i}}" />
+      </view>
+    </view>
+  </view>
+  <view class="weui-icon_success"></view>
+</scroll-view>
+
+<view class="wa-row" style="height:100rpx;">
+  <image src="{{changeImageUrl}}" class="text-center icon ion-ios" style="height:32px;line-height:32px" bindtap="changeType"></image>
+
+  <view wx:if="{{!isSpeech}}" class="padding_half" style="flex:1; height:60rpx; line-height:60rpx;border-bottom:1px solid gray;">
+    <input value="{{msg}}" bindinput="sendMessage" />
+  </view>
+  <view wx:if="{{isSpeech}}" class="padding_half" style="flex:1; height:60rpx; line-height:60rpx;">
+    <button class="speech-button" hover-class='button-hover' hover-start-time="0" bindtouchstart="startRecord" bindtouchend="stopRecord">{{speechText}}</button>
+  </view>
+
+  <image src="{{emotionIcon}}" class="text-center icon ion-ios" style="height:64rpx;line-height:64rpx" bindtap="emotionBtn"></image>
+  <button type="primary" disabled="{{isSpeech||msg==''}}" size='mini' class="send-button" bindtap="send">发送</button>
+</view>
+
+<view id="emotionPanel" wx:if="{{emotionBox}}">
+  <image wx:for="{{ emotions }}" src="{{item.src}}" class="emotion" data-name="{{item.name}}" bindtap="chooseEmotion"></image>
+</view>

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "nav": "../components/nav/nav",
+    "weather": "plugin://weather/weather"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#000",
+  "navigationBarTitleText": "小Q",
+  "navigationBarTextStyle": "black"
+}

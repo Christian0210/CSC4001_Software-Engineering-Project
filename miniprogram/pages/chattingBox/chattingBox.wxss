@@ -1,0 +1,262 @@
+.right-Avatar {
+  float: right;
+  width: 85rpx;
+  height: 85rpx;
+}
+
+.right-Triangle {
+  float: right;
+  margin-top: 35rpx;
+  width: 0;
+  height: 0;
+  border-top: 16rpx solid transparent;
+  border-left: 24rpx solid yellowgreen;
+  border-bottom: 16rpx solid transparent;
+}
+
+.right-message {
+  float: right;
+  margin-top: 10rpx;
+  line-height: 65rpx;
+  background: yellowgreen;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+}
+
+.right-speech-message {
+  float: right;
+  margin-top: 10rpx;
+  line-height: 65rpx;
+  background: yellowgreen;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  width: 150rpx;
+}
+
+.left-speech-message {
+  float: left;
+  margin-top: 10rpx;
+  line-height: 65rpx;
+  background: yellowgreen;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  width: 150rpx;
+}
+
+.left-Avatar {
+  float: left;
+  width: 85rpx;
+  height: 85rpx;
+}
+
+.left-Triangle {
+  float: left;
+  margin-top: 35rpx;
+  width: 0;
+  height: 0;
+  border-top: 16rpx solid transparent;
+  border-right: 24rpx solid yellowgreen;
+  border-bottom: 16rpx solid transparent;
+}
+
+.left-message {
+  float: left;
+  margin-top: 10rpx;
+  line-height: 65rpx;
+  background: yellowgreen;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+}
+
+.speech-button {
+  height: 70rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  line-height: 70rpx;
+  background: white;
+}
+
+.button-hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0.7;
+}
+
+.icon {
+  vertical-align: middle;
+  margin-top: 8rpx;
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.ion-ios {
+  background-size: 64rpx 64rpx;
+  background-repeat: no-repeat;
+  background-position: center center;
+  vertical-align: middle;
+}
+
+.emotion {
+  width: 64rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  margin: 10rpx;
+}
+
+#emotionPanel {
+  padding-left: 40rpx;
+}
+
+.send-button {
+  margin-left: 10rpx;
+  margin-top: 8rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+}
+
+/* 
+  The following comes from the css of the chatting demeo program.
+  I need to more deeply understand the machenism, usage and cooperation
+  between html, css and js. If only the layout is wrong, probably is 
+  because of some missing in the css files. I just need to get them in
+  place.
+ */
+ .padding{
+  padding:20rpx;
+}
+.padding_half{
+  padding: 10rpx;
+}
+.text-center{
+  text-align: center
+}
+.icon {
+  vertical-align: middle;
+  margin-top: 8rpx;
+  width: 64rpx;
+  height: 64rpx;
+}
+.clearfix{
+  overflow: hidden;
+}
+.right-Avatar {
+  float: right;
+  width: 85rpx;
+  height: 85rpx;
+}
+.right-Triangle {
+  float: right;
+  margin-top: 35rpx;
+  width: 0;
+  height: 0;
+  border-top: 16rpx solid transparent;
+  /* border-left: 24rpx solid yellowgreen; */
+  border-left: 24rpx solid rgb(17, 196, 169);
+  border-bottom: 16rpx solid transparent;
+}
+.right-speech-message {
+  float: right;
+  margin-top: 10rpx;
+  line-height: 65rpx;
+  /* background: yellowgreen; */
+  background: rgb(17, 196, 169);
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  width: 150rpx;
+}
+.right-message {
+  float: right;
+  margin-top: 10rpx;
+  line-height: 65rpx;
+  /* background: yellowgreen; */
+  background: rgb(17, 196, 169);
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  color: white;
+}
+.left-Avatar {
+  float: left;
+  width: 85rpx;
+  height: 85rpx;
+}
+.left-Triangle {
+  float: left;
+  margin-top: 35rpx;
+  width: 0;
+  height: 0;
+  border-top: 16rpx solid transparent;
+  /* border-right: 24rpx solid yellowgreen; */
+  /* border-right: 24rpx solid rgb(17, 196, 169); */
+  border-right: 24rpx solid white;
+  border-bottom: 16rpx solid transparent;
+}
+.left-speech-message {
+  float: left;
+  margin-top: 10rpx;
+  line-height: 65rpx;
+  /* background: yellowgreen; */
+  /* background: rgb(17, 196, 169); */
+  background: rgb(255, 255, 255);
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  width: 150rpx;
+}
+.left-message {
+  float: left;
+  margin-top: 10rpx;
+  line-height: 65rpx;
+  /* background: yellowgreen; */
+  /* background: rgb(17, 196, 169); */
+  background: rgb(255, 255, 255);
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  color: rgb(10, 104, 90);
+}
+.wa-row{
+	display: flex;
+  padding: 10rpx;
+  width: 100%;
+  box-sizing: border-box
+}
+.speech-button {
+  height: 70rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  line-height: 70rpx;
+  background: white;
+}
+.button-hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0.7;
+}
+.send-button {
+  margin-left: 10rpx;
+  margin-top: 8rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+}
+.emotion {
+  width: 64rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  margin: 10rpx;
+}
+#emotionPanel {
+  padding-left: 40rpx;
+}
+.title {
+  text-align: center;
+  margin-top: 0rpx;
+  /* background-color: rgb(9, 208, 178); */
+  /* background-color: rgb(247, 209, 74); */
+  padding: 0rpx;
+  font: bold;
+}
+.titleText {
+  font-weight: bold;
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(17, 196, 169);
+  text-shadow: 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 0px 0 white, 2px 0px 0 white, -2px 0px 0 white, -2px 0px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 0px 0 white, 2px 0px 0 white, -2px 0px 0 white, -2px 0px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 0px 0 white, 2px 0px 0 white, -2px 0px 0 white, -2px 0px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px 0px 0 white, 2px 0px 0 white, -2px 0px 0 white, -2px 0px 0 white, 0px 2px 0 white, 0px -2px 0 white, 0px -2px 0 white, 0px 2px 0 white, 0px 2px 0 white, 0px -2px 0 white, 0px -2px 0 white, 0px 2px 0 white, 0px 2px 0 white, 0px -2px 0 white, 0px -2px 0 white, 0px 2px 0 white, 0px 2px 0 white, 0px -2px 0 white, 0px -2px 0 white, 0px 2px 0 white, 0px 0px 0 white, 0px 0px 0 white, 0px 0px 0 white, 0px 0px 0 white, 0 0 0 white;
+
+}
+

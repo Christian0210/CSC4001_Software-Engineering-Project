@@ -1,0 +1,94 @@
+/**app.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+} 
+
+button:focus{
+  outline: 0;
+}
+
+button::after{
+  border: none;
+}
+
+.shadow {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .075);
+}
+.primary {
+  background-color: #1da1f2 !important;
+}
+.success {
+  background-color: #4fd69c;
+}
+.danger {
+  background-color: #f75676;
+}
+.danger-text {
+  color: #f75676;
+}
+.warn {
+  background-color: #ffdd57;
+}
+.sky {
+  background-color: #54c7ec;
+}
+.purple {
+  background-color: #5e72e4;
+}
+.dark {
+  color: #343a40;
+}
+.d-header {
+  font-size: 37rpx;
+  text-align: center;
+  padding: 30rpx;
+  border-bottom: 2rpx solid #eee;
+}
+.dialog-tip {
+  font-size: 27rpx;
+  color: grey;
+  margin: 4rpx 0;
+}
+.pop-indicator {
+  background-color: #E9EBEE;
+  height: 10rpx;
+  width: 68rpx;
+  margin: 3rpx auto;
+  border-radius: 19rpx;
+}
+.divide {
+  width: 43%;
+  height: 3rpx;
+  background-color: orange;
+  margin: 20rpx auto;
+}
+.list-item-btn {
+  padding: 24rpx;
+  text-align: center;
+  border-bottom: solid 1rpx rgba(0,0,0,.1);
+  font-weight: bold;
+}
+.chart-nav-bg {
+  /* background-color: #7471e0; */
+  /* background-color: #68c9b4; */
+  background-color: rgb(17, 196, 169);
+}
+.flex {
+  display: flex;
+}
+.flex-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-v {
+  display: flex;
+  justify-content: center;
+}
+.flex-h {
+  display: flex;
+  align-items: center;
+}
